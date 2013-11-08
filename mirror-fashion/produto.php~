@@ -23,6 +23,7 @@
 					<h1><?= $produto["nome"] ?></h1>
 					<h2>por apenas <?= $produto["preco"] ?></h2>
 					<form action="checkout.php" method="POST">
+						<input type="hidden" name="id" value="<?= $produto['id'] ?>">
 						<input type="hidden" name="nome" value="<?= $produto['nome'] ?>">
 						<input type="hidden" name="preco" value="<?= $produto['preco'] ?>">
 						<fieldset class="cores">
@@ -47,6 +48,7 @@
 						<fieldset class="tamanhos">
 							<legend>Escolha o tamanho:</legend>
 							<input type="range" min="36" max="46" step="2" name="tamanho" id="tamanho">
+							<output for="tamanho" name="valortamanho">42</output>
 						</fieldset>
 						<input type="submit" class="comprar" value="Comprar">
 					</form>
@@ -84,5 +86,12 @@
 			</div>
 		</div>
 		<?php include("_rodape.php") ?>
+
+		<script src="js/jquery.js"></script>
+		<script>
+			$('[name=tamanho]').on('input', function(){
+				$('[nome=valortamanho]').val(this.value);
+			});
+		</script>
 	</body>
 </html>

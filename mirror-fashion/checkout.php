@@ -5,8 +5,32 @@
 		<meta name="viewport" content="width=device-width">
 		<title>Checkout Mirror Fashion</title>
 		<link rel="stylesheet" href="css/bootstrap.css">
+		<style>
+			body {
+				padding-top: 50px;
+			}
+			.form-control:invalid {
+				border: 1px solid #cc0000;
+			}
+			.navbar {
+				margin: 0;
+			}
+		</style>
 	</head>
 	<body>
+		<nav class="navbar navbar-default navbar-fixed-top">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="/">Mirror Fashion</a>
+			<button class="navbar-toggle" type="button" data-target=".navbar-collapse" 
+				data-toggle="collapse"><span class="glyphicon glyphicon-align-justify"></span></button>
+			</div>
+			<ul class="nav navbar-nav collapse navbar-collapse">
+				<li><a href="#">Sobre</a></li>
+				<li><a href="#">Ajuda</a></li>
+				<li><a data-toggle="modal" href="#faq">Perguntas frequentes</a></li>
+				<li><a href="#">Entre em contato</a></li>
+			</ul>			
+		</nav>
 		<div class="jumbotron">
 			<div class="container">
 				<h1>Ótima escolha!</h1>
@@ -45,15 +69,15 @@
 								<div class="form-group">
 									<label for="nome">Nome completo</label>
 									<input type="text" class="form-control" id="nome" name="nome"
-										placeholder="exemplo@exemplo.com">
+										placeholder="exemplo@exemplo.com" required>
 								</div>
 								<div class="form-group">
 									<label for="email">Email</label>
-									<input type="text" class="form-control" id="email" name="email">
+									<input type="email" class="form-control" id="email" name="email">
 								</div>
 								<div class="form-group">
 									<label for="cpf">CPF</label>
-									<input type="text" class="form-control" id="cpf" name="cpf">
+									<input type="text" class="form-control" id="cpf" name="cpf" required>
 								</div>
 								<div class="checkbox">
 									<label>
@@ -130,5 +154,27 @@
 				</div>
 			</div>
 		</div>
+
+		<div class="modal" id="faq">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h3 class="modal-title">Perguntas Frequentes</h3>
+					</div>
+					<div class="modal-body">
+						<h4>Posso pagar com boleto?</h4>
+						<p>Nope.</p>
+						<h4>Qual o prazo de entraga?</h4>
+						<p>28 min</p>
+						<h4>Por que só posso comprar 1 produto por vez?</h4>
+						<p>Foco, meu caro.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="js/jquery.js"></script>
+		<script src="js/bootstrap.js"></script>
 	</body>
 </html>

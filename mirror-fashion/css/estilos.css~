@@ -217,7 +217,7 @@ footer .container {
 
 .menu-departamentos ul li:hover ul {
 	/*display: block;*/
-	height: 100%;
+	height: 107px;
 }
 
 .menu-departamentos ul li ul li {
@@ -233,4 +233,8 @@ footer .container {
 	content: "\2756";
 	padding-right: 5px;
 	opacity: 0.4;
+}
+
+.painel button {
+	display: none;
 }

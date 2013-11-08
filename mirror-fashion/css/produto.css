@@ -147,6 +147,10 @@ td:first-child {
 	border-top: 2px solid #ccc;
 }
 
+input[type=range] {
+	vertical-align: middle;
+}
+
 @media (min--moz-device-pixel-ratio:0) {
 	fieldset {
 		display: table-column;
@@ -189,7 +193,7 @@ td:first-child {
 		display: inline-block;
 		vertical-align:top;
 		margin: 1em 0;
-		min-width: 200px;
+		min-width: 233px;
 		width: 45%;
 	}
 }

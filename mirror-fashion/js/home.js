@@ -16,3 +16,9 @@ function trocaBanner() {
 
 document.querySelector("#form-busca").onsubmit = validaBusca;
 setInterval(trocaBanner, 4000);
+
+$('.painel').addClass('painel-compacto');
+
+$('.painel button').click(function() {
+	$(this).parent().removeClass('painel-compacto');
+});

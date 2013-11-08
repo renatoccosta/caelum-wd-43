@@ -48,6 +48,7 @@
 						<fieldset class="tamanhos">
 							<legend>Escolha o tamanho:</legend>
 							<input type="range" min="36" max="46" step="2" name="tamanho" id="tamanho">
+							<output for="tamanho" name="valortamanho">42</output>
 						</fieldset>
 						<input type="submit" class="comprar" value="Comprar">
 					</form>
@@ -85,5 +86,12 @@
 			</div>
 		</div>
 		<?php include("_rodape.php") ?>
+
+		<script src="js/jquery.js"></script>
+		<script>
+			$('[name=tamanho]').on('input', function(){
+				$('[name=valortamanho]').val(this.value);
+			});
+		</script>
 	</body>
 </html>
